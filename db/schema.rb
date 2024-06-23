@@ -34,7 +34,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_23_135249) do
 
   create_table "questions", force: :cascade do |t|
     t.text "description", null: false
-    t.integer "subject_id", null: false
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["subject_id"], name: "index_questions_on_subject_id"

@@ -617,3 +617,134 @@ ubuntu-bionic login: [ 9677.299996] INFO: rcu_sched self-detected stall on CPU
 [ 9677.304663] 	0-...!: (1 ticks this GP) idle=1a2/1/0 softirq=108931/108931 fqs=0 
 [ 9677.310637] 	 (t=310449 jiffies g=41959 c=41958 q=3)
 [ 9677.319862] rcu_sched kthread starved for 310449 jiffies! g41959 c41958 f0x0 RCU_GP_WAIT_FQS(3) ->state=0x402 ->cpu=0
+[[0;32m  OK  [0m] Stopped target Host and Network Name Lookups.
+[[0;32m  OK  [0m] Stopped target Cloud-init target.
+[[0;32m  OK  [0m] Stopped target Timers.
+[[0;32m  OK  [0m] Stopped Message of the Day.
+[[0;32m  OK  [0m] Stopped Execute cloud user/final scripts.
+[[0;32m  OK  [0m] Stopped Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Stopped Daily apt download activities.
+[[0;32m  OK  [0m] Stopped Discard unused blocks once a week.
+[[0;32m  OK  [0m] Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
+         Stopping User Manager for UID 1000...
+         Stopping Session 35 of user vagrant.
+         Stopping Authorization Manager...
+[[0;32m  OK  [0m] Stopped target Graphical Interface.
+         Stopping Accounts Service...
+[[0;32m  OK  [0m] Stopped target System Time Synchronized.
+[[0;32m  OK  [0m] Stopped target Multi-User System.
+[[0;32m  OK  [0m] Stopped PostgreSQL RDBMS.
+         Stopping PostgreSQL Cluster 10-main...
+         Stopping LSB: automatic crash report generation...
+         Stopping MySQL Community Server...
+         Stopping D-Bus System Message Bus...
+[[0;32m  OK  [0m] Stopped target Login Prompts.
+         Stopping Getty on tty1...
+         Stopping Serial Getty on ttyS0...
+         Stopping LXD - container startup/shutdown...
+         Stopping Unattended Upgrades Shutdown...
+         Stopping irqbalance daemon...
+         Stopping FUSE filesystem for LXC...
+[[0;32m  OK  [0m] Stopped Resets System Activity Data Collector.
+         Stopping System Logging Service...
+         Stopping LSB: Record successful boot for GRUB...
+         Stopping Regular background program processing daemon...
+         Stopping Dispatcher daemon for systemd-networkd...
+         Stopping Availability of block devices...
+[[0;32m  OK  [0m] Stopped Apply the settings specified in cloud-config.
+[[0;32m  OK  [0m] Stopped target Cloud-config availability.
+[[0;32m  OK  [0m] Stopped Wait until snapd is fully seeded.
+         Stopping OpenBSD Secure Shell server...
+         Stopping Deferred execution scheduler...
+[[0;32m  OK  [0m] Stopped Daily Cleanup of Temporary Directories.
+         Stopping Virtualbox guest utils...
+[[0;32m  OK  [0m] Unmounted /var/lib/lxcfs.
+[[0;32m  OK  [0m] Stopped irqbalance daemon.
+[[0;32m  OK  [0m] Stopped Deferred execution scheduler.
+[[0;32m  OK  [0m] Stopped Accounts Service.
+[[0;32m  OK  [0m] Stopped Dispatcher daemon for systemd-networkd.
+[[0;32m  OK  [0m] Stopped Unattended Upgrades Shutdown.
+[[0;32m  OK  [0m] Stopped System Logging Service.
+[[0;32m  OK  [0m] Stopped Regular background program processing daemon.
+[[0;32m  OK  [0m] Stopped OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Stopped Authorization Manager.
+[[0;32m  OK  [0m] Stopped Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Stopped Getty on tty1.
+[[0;32m  OK  [0m] Stopped User Manager for UID 1000.
+[[0;32m  OK  [0m] Stopped D-Bus System Message Bus.
+[[0;32m  OK  [0m] Stopped Availability of block devices.
+[[0;32m  OK  [0m] Stopped PostgreSQL Cluster 10-main.
+[[0;32m  OK  [0m] Stopped FUSE filesystem for LXC.
+[[0;32m  OK  [0m] Stopped Session 35 of user vagrant.
+[[0;32m  OK  [0m] Stopped LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Removed slice system-postgresql.slice.
+[[0;32m  OK  [0m] Removed slice User Slice of vagrant.
+[[0;32m  OK  [0m] Removed slice system-getty.slice.
+         Stopping Permit User Sessions...
+[[0;32m  OK  [0m] Stopped target Login Prompts (Pre).
+[[0;32m  OK  [0m] Removed slice system-serial\x2dgetty.slice.
+         Stopping Login Service...
+[[0;32m  OK  [0m] Stopped LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Stopped LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Stopped Permit User Sessions.
+[[0;32m  OK  [0m] Stopped target Remote File Systems.
+         Unmounting /vagrant...
+[[0;32m  OK  [0m] Stopped Virtualbox guest utils.
+[[0;32m  OK  [0m] Unmounted /vagrant.
+[[0;32m  OK  [0m] Stopped Login Service.
+[[0;32m  OK  [0m] Stopped target User and Group Name Lookups.
+[[0;32m  OK  [0m] Stopped target Network is Online.
+[[0;32m  OK  [0m] Stopped target Remote File Systems (Pre).
+[[0;32m  OK  [0m] Stopped MySQL Community Server.
+[[0;32m  OK  [0m] Stopped target Network.
+         Stopping Network Name Resolution...
+[[0;32m  OK  [0m] Stopped target Basic System.
+[[0;32m  OK  [0m] Stopped target Paths.
+[[0;32m  OK  [0m] Stopped ACPI Events Check.
+[[0;32m  OK  [0m] Stopped target Slices.
+[[0;32m  OK  [0m] Removed slice User and Session Slice.
+[[0;32m  OK  [0m] Stopped target Sockets.
+[[0;32m  OK  [0m] Closed UUID daemon activation socket.
+[[0;32m  OK  [0m] Closed cloud-init hotplug hook socket.
+[[0;32m  OK  [0m] Closed ACPID Listen Socket.
+[[0;32m  OK  [0m] Closed Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Closed Open-iSCSI iscsid Socket.
+[[0;32m  OK  [0m] Closed D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Closed Syslog Socket.
+[[0;32m  OK  [0m] Closed LXD - unix socket.
+[[0;32m  OK  [0m] Stopped target System Initialization.
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (metadata service crawler).
+[[0;32m  OK  [0m] Stopped Wait for Network to be Configured.
+         Stopping Load/Save Random Seed...
+[[0;32m  OK  [0m] Stopped target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Stopped Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
+         Stopping Update UTMP about System Boot/Shutdown...
+[[0;32m  OK  [0m] Stopped Network Name Resolution.
+[[0;32m  OK  [0m] Stopped Load/Save Random Seed.
+         Stopping Network Service...
+[[0;32m  OK  [0m] Stopped Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
+[[0;32m  OK  [0m] Stopped target Local File Systems.
+         Unmounting /run/user/1000...
+[[0;32m  OK  [0m] Stopped target Mounted snaps.
+[[0;32m  OK  [0m] Stopped target Mounting snaps.
+[[0;32m  OK  [0m] Unmounted /run/user/1000.
+[[0;32m  OK  [0m] Reached target Unmount All Filesystems.
+[[0;32m  OK  [0m] Stopped target Local File Systems (Pre).
+         Stopping Monitoring of LVM2 mirrors…ng dmeventd or progress polling...
+[[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Stopped target Swap.
+[[0;32m  OK  [0m] Stopped Network Service.
+[[0;32m  OK  [0m] Stopped Apply Kernel Variables.
+[[0;32m  OK  [0m] Stopped Load Kernel Modules.
+[[0;32m  OK  [0m] Stopped target Network (Pre).
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (pre-networking).
+[[0;32m  OK  [0m] Stopped Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Reached target Shutdown.
+[[0;32m  OK  [0m] Reached target Final Step.
+         Starting Power-Off...
+[[0;32m  OK  [0m] Stopped Monitoring of LVM2 mirrors,…sing dmeventd or progress polling.
+         Stopping LVM2 metadata daemon...
+[[0;32m  OK  [0m] Stopped LVM2 metadata daemon.
+[20704.007253] reboot: Power down

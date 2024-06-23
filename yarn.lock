@@ -15,6 +15,13 @@
   resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-8.0.4.tgz#5c5361c06a37cdf10dcba4223f1afd0ca1c75091"
   integrity sha512-mlZEFUZrJnpfj+g/XeCWWuokvQyN68WvM78JM+0jfSFc98wegm259vCbC1zSllcspRwbgXK31ibehCy5PA78/Q==
 
+"@nathanvda/cocoon@^1.2.14":
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/@nathanvda/cocoon/-/cocoon-1.2.14.tgz#aaea910e4b9c0d28d5bdcb7f3743617db46b09af"
+  integrity sha512-WcEt2vVp50de2i7rkD4O+96O1iMtMIcTBNGPocrHfcmHDujKOngoLHFF8Ektgoh8PjwFAJMxx8WyGv0BtKTjxQ==
+  dependencies:
+    jquery "^3.3.1"
+
 "@popperjs/core@^2.11.8":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
@@ -72,7 +79,7 @@ jquery-ujs@^1.2.3:
   resolved "https://registry.yarnpkg.com/jquery-ujs/-/jquery-ujs-1.2.3.tgz#dcac6026ab7268e5ee41faf9d31c997cd4ddd603"
   integrity sha512-59wvfx5vcCTHMeQT1/OwFiAj+UffLIwjRIoXdpO7Z7BCFGepzq9T9oLVeoItjTqjoXfUrHJvV7QU6pUR+UzOoA==
 
-jquery@*:
+jquery@*, jquery@^3.3.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
   integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==

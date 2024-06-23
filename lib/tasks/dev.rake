@@ -62,19 +62,28 @@ namespace :dev do
   end
 
   desc "Adiciona perguntas e respostas"
-  task add_questions_and_subjects: :environment do
+  task add_questions_and_answers: :environment do
     Subject.all.each do |subject|
       rand(5..10).times do |i|
-        Question.create!(
-          description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.question}",
-          subject: subject
-        )
+        # cadastrando as questões com suas respostas
+        params = params_question(subject)
+        answers_array = params[:question][:answers_attributes]
+
+        # cadastrando as respostas (todas são incorretas)
+        add_answers(answers_array)
+
+        # definindo qual é a resposta correta
+        elect_correct_answer(answers_array)
+
+        # criando as questões no banco de dados
+        Question.create!(params[:question])
       end
     end
   end
 
   private
 
+  # mostrando um spinner quando rodar no terminal o comando rails dev:setup
   def show_spinner(msg_start, msg_end="Concluído")
     spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
     spinner.auto_spin
@@ -82,5 +91,38 @@ namespace :dev do
     yield
 
     spinner.success("#{msg_end}")
+  end
+
+  # definindo os parâmetros para as perguntas
+  def params_question(subject = Subject.all.sample)
+    {
+      question:
+      {
+        description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.question}",
+        subject: subject,
+        answers_attributes: []
+      }
+    }
+  end
+
+  # definindo os parâmetros para as respostas
+  def params_answer(correct = false)
+    {
+      description: Faker::Lorem.sentence,
+      correct: correct
+    }
+  end
+
+  # adicionando respostas
+  def add_answers(answers_array = [])
+    rand(2..5).times do |j|
+      answers_array.push(params_answer)
+    end
+  end
+
+  # elegendo aleatoriamente qual a resposta certa para uma pergunta
+  def elect_correct_answer(answers_array = [])
+    index = rand(answers_array.size)
+    answers_array[index] = params_answer(true)
   end
 end
