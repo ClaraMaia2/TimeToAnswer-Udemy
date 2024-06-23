@@ -1,0 +1,6 @@
+en:
+  messages:
+    listing_questions: Listing Questions
+    listing_subjects: Listing Subjects
+    listing_admins: Listing Administrators
+    confirm_with: Are you sure you want to delete [%{item}]?

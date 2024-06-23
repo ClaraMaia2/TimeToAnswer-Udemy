@@ -2,7 +2,7 @@
 <html lang="en">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Listing Subjects</h1>
+            <h1 class="page-header"><%= t('messages.listing_subjects') %></h1>
         </div>
     </div>
 
@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Description</th>
+                <th><%= translate_attribute(@subjects, :description) %></th>
                 <th>
                     <%= link_to new_admins_backoffice_subject_path, class:"btn btn-success btn-circle btn-sm" do %>
                         <i class="fa fa-plus"></i>
@@ -30,7 +30,7 @@
                             <i class="fa fa-edit"></i>
                         <% end %> 
 
-                        <%= link_to admins_backoffice_subject_path(subject.id), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: "Are you sure?" } do %>
+                        <%= link_to admins_backoffice_subject_path(subject.id), method: :delete, class:"btn btn-danger btn-circle btn-sm", data: { confirm: t('messages.confirm_with', item: subject.description.truncate(15)) } do %>
                             <i class="fa fa-minus"></i>
                         <% end %>
                     </td>
