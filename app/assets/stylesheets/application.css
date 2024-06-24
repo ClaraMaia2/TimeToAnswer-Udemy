@@ -12,4 +12,6 @@
  * 
  *= require_self
  *= require bootstrap
+ *= require sb-admin-2
+ *= require sb-admin-2.min
  */

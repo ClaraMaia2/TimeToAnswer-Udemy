@@ -144,6 +144,7 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'admins_backoffice' %>
     
+    <!-- aparece uma mensagem de erro caso o email e/ou a senha sejam inválidos -->
     <% if notice %>
         <%= javascript_tag do %>
             $.bootstrapGrowl("<%= notice %>", {
