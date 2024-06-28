@@ -1,0 +1,48 @@
+<main class="container">
+  <div class="bg-body-tertiary p-5 rounded">
+    <p class="lead">
+      <h1><%= msg_main_container %></h1>
+    </p>
+  </div>
+</main>
+
+<br>
+
+<% @questions.each do |question| %>
+  <%= form_with url: site_answer_path, local: false do |form| %>
+    <div class="col-md-12 col-sm-12" style="justify-content: space-evenly; text-align: justify; margin-left: 5px;">
+      <div class="x_panel tile fixed_height_320">
+        <div class="x_title">
+          <span class="badge badge-info">
+            <!-- Filtering questions by the subject -->
+            <%= link_to "#{question.subject.description} (#{question.subject.questions_count})", site_search_subject_path(question.subject_id, question.subject.description), style:"color: white;" %>
+          </span>
+          <h2><%= question.description %></h2>
+        </div>
+        <div class="x_content">
+          <ul>
+            <% question.answers.each do |answer| %>
+              <li style="list-style: none;">
+                <div class="radio">
+                  <label>
+                    <%= radio_button_tag "answer_id", answer.id %>
+                    <%= answer.description %>
+                  </label>
+                </div>
+              </li>
+            <% end %>
+            <br>
+            <li style="list-style: none;">
+              <%= form.submit "Answer", class:"btn btn-round btn-secondary btn-sm", style:"color: #FFFFFF", id: "submit_#{question.id}"%>
+            </li>
+            <br>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="text-center">
+    <%= paginate @questions %>
+</div>

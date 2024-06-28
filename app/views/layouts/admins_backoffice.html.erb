@@ -63,7 +63,7 @@
             <!-- Nav Item - Subjects -->
             <li class="nav-item">
                 <%= link_to admins_backoffice_subjects_path, class:"nav-link" do %>
-                    <i class="fa fa-file-text-o fa-fw"></i>
+                    <i class="fa fa-file"></i>
                     <span>Subjects</span>
                 <% end %>
             </li>
@@ -86,23 +86,19 @@
             <!-- Main Content -->
             <div id="content">
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow show">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle show" href="#" id="userDropdown" role="button"
+                                data-bs-toggle="collapse" aria-haspopup="true" aria-expanded="true">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= current_admin.email %></span>
                                 <%= image_tag 'img.jpg', class:"img-profile rounded-circle" %>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in show" aria-labelledby="userDropdown">
-                                    <%= link_to destroy_admin_session_path, method: :delete do %>
-                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400">Logout</i>
-                                    <% end %>
-                                </a>
+                                <%= link_to "Logout", destroy_admin_session_path, method: :delete, class:"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400", style: "margin-left: 10px"%>
                             </div>
                         </li>
                     </ul>
@@ -141,8 +137,10 @@
     </a>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <%= javascript_include_tag 'application' %>
+    <%= javascript_importmap_tags %>
     <%= javascript_include_tag 'admins_backoffice' %>
+    <%= javascript_include_tag 'application' %>
+    
     
     <!-- aparece uma mensagem de erro caso o email e/ou a senha sejam inválidos -->
     <% if notice %>

@@ -18,10 +18,10 @@
 
   <body class="login">
     <%= yield %>
-
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'user_devise' %>
+    
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'user_devise' %>
+    <%= javascript_include_tag 'application' %>
 
     <!-- aparece uma mensagem de erro caso o email e/ou a senha sejam inválidos -->
     <% if flash %>
