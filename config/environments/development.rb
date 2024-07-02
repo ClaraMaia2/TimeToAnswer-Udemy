@@ -74,6 +74,17 @@ Rails.application.configure do
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
 
-  # configuração para o use da gem devise
+  # configuração para o uso da gem devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # mailtrap config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'ef96c46a592e09',
+    :password => '0daef17afd50e7',
+    :address => 'sandbox.smtp.mailtrap.io',
+    :host => 'sandbox.smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :login
+  }
 end
