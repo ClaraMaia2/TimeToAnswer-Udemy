@@ -43,6 +43,14 @@
   <% end %>
 <% end %>
 
-<div class="text-center">
-    <%= paginate @questions %>
-</div>
+<% if user_signed_in? %>
+  <div class="text-center">
+      <%= paginate @questions %>
+  </div>
+<% else %>
+  <div class="text-center">
+    <div class="alert alert-warning">
+      Login to continue answering questions...
+    </div>
+  </div>
+<% end %>

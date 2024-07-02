@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   namespace :users_backoffice do
     get 'welcome/index'
+    get 'profile', to: 'profile#edit'
+
+    # envia os dados "por baixo dos panos" para o controller direto do formulário
+    patch 'profile', to: 'profile#update'
   end
 
   namespace :admins_backoffice do
@@ -17,10 +21,11 @@ Rails.application.routes.draw do
     resources :questions # questions
   end
 
-  devise_for :admins
+  devise_for :admins, skip: [:registrations]
   devise_for :users
 
   get 'inicio', to: 'site/welcome#index'
+  get 'backoffice', to: 'admins_backoffice/welcome#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

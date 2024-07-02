@@ -24,10 +24,11 @@
     <%= javascript_include_tag 'application' %>
 
     <!-- aparece uma mensagem de erro caso o email e/ou a senha sejam inválidos -->
-    <% if flash %>
-        <% flash.each do |key, value| %>
+    <%= javascript_tag { "alert('JavaScript is working!');" } %>
+    <% unless resource.errors.empty? %>
+        <% resource.errors.full_messages.each do |msg| %>
             <%= javascript_tag do %>
-                $.bootstrapGrowl("<%= value %>", {
+                $.bootstrapGrowl("<%= msg %>", {
                     type: 'danger',
                     align: 'right',
                     allow_dismiss: true,

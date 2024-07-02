@@ -5,7 +5,9 @@ element.classList.remove('btn-success');
 element.classList.remove('btn-danger');
 
 if (<%= @answer.correct %>) {
+
     element.classList.add('btn-success');
+
     $.bootstrapGrowl("Correct answer", {
                 type: 'success',
                 align: 'right',

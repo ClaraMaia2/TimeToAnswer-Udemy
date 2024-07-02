@@ -1,0 +1,12 @@
+$('#avatarModal').modal('hide');
+
+document.getElementById('profileAvatarSmall').src = "<%= url_for(@user.user_profile.avatar) %>"
+document.getElementById('profileAvatarMedium').src = "<%= url_for(@user.user_profile.avatar) %>"
+document.getElementById('profileAvatarLarge').src = "<%= url_for(@user.user_profile.avatar) %>"
+
+$.bootstrapGrowl("Avatar successfully updated", {
+    type: 'success',
+    align: 'right',
+    allow_dismiss: true,
+    stackup_spacing: 10
+});
