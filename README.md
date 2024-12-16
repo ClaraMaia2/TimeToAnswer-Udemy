@@ -34,3 +34,11 @@ To go to the admins pages, first you have to login as one (default email and pas
 ```
 http://localhost:3000/admins/sign_in
 ```
+
+## 📜 License
+
+This project is for learning purposes only and is not intended for production use. Feel free to explore and learn from it!
+
+## ⭐ If you found this project helpful, consider giving it a star!
+
+<br>
